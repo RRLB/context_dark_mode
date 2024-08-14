@@ -1,16 +1,17 @@
 import { useContext, useState } from "react";
 import { Level1 } from "./components/Level1";
-import { ThemeModeContext, THEME } from "./contexts/ThemeModeContext";
+import { THEME, ThemeModeContext } from "./contexts/ThemeModeContext";
 
 export function App() {
-  const [themeMode, setThemeMode] = useState("light");
+  const initialThemeMode = useContext(ThemeModeContext);
+  const [themeMode, setThemeMode] = useState(initialThemeMode);
 
   return (
     <ThemeModeContext.Provider value={{ themeMode, setThemeMode }}>
       <div
         style={{
+          color: THEME[themeMode].color,
           backgroundColor: THEME[themeMode].backgroundColor,
-          color: THEME[themeMode].textColor,
           height: "100vh",
         }}
       >

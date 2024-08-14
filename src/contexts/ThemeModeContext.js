@@ -1,14 +1,14 @@
 import { createContext } from "react";
 
-export const ThemeModeContext = createContext();
+export const ThemeModeContext = createContext("light");
 
 export const THEME = {
   light: {
+    color: "#1E1F2C",
     backgroundColor: "white",
-    textColor: "#1E1F2C",
   },
   dark: {
+    color: "white",
     backgroundColor: "#1E1F2C",
-    textColor: "white",
   },
 };

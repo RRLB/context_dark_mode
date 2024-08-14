@@ -2,9 +2,9 @@ import { Level3 } from "./Level3";
 
 export function Level2(props) {
   return (
-    <>
-      <div>I am level 2</div>
+    <div>
+      <div>Niveau de profondeur 2</div>
       <Level3 />
-    </>
+    </div>
   );
 }
